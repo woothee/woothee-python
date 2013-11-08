@@ -1,0 +1,12 @@
+.DS_Store
+*~
+*.tmproj
+tmtags
+\#*
+.\#*
+*.swp
+tmp/
+
+*.pyc
+PyYAML*.egg
+lib/*.egg-info
