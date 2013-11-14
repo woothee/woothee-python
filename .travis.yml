@@ -4,7 +4,7 @@ python:
   - "2.7"
   - "3.2"
   - "3.3"
-# command to install dependencies
+before_install:
+  - python setup.py dataset
 install: python setup.py build
-# command to run tests
 script: python setup.py test
