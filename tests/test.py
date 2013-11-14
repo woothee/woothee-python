@@ -4,12 +4,12 @@ import os
 import sys
 import unittest
 
-_FILE_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, os.path.join(_FILE_PATH, 'lib'))
+BASE_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(BASE_PATH, 'lib'))
 
 import yaml
 
-TESTSET_DIR = os.path.join(os.path.dirname(_FILE_PATH), 'woothee', 'testsets')
+TESTSET_DIR = os.path.join(BASE_PATH, 'woothee', 'testsets')
 
 TARGETS = [
            ['crawler.yaml','Crawler'],['crawler_google.yaml','Crawler/Google'],
