@@ -2,10 +2,7 @@ all: test
 
 TIMESTAMP=$(shell date +%Y%m%d-%H%M%S)
 
-checkyaml:
-	perl ../bin/dataset_checker.pl
-
-lib/woothee/dataset.py: ../dataset.yaml
+lib/woothee/dataset.py: woothee/dataset.yaml
 	python setup.py dataset
 	sync; sync; sync
 

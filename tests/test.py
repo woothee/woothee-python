@@ -9,7 +9,7 @@ sys.path.insert(0, os.path.join(_FILE_PATH, 'lib'))
 
 import yaml
 
-TESTSET_DIR = os.path.join(os.path.dirname(_FILE_PATH), 'testsets')
+TESTSET_DIR = os.path.join(os.path.dirname(_FILE_PATH), 'woothee', 'testsets')
 
 TARGETS = [
            ['crawler.yaml','Crawler'],['crawler_google.yaml','Crawler/Google'],

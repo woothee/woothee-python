@@ -16,9 +16,9 @@ class dataset_command(Command):
   
   def run(self):
     import os, sys
-    root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    bin_dir = os.path.join(root_dir, 'bin')
-    sys.path.insert(0, bin_dir)
+    root_dir = os.path.dirname(os.path.abspath(__file__))
+    scripts_dir = os.path.join(root_dir, 'scripts')
+    sys.path.insert(0, scripts_dir)
     import dataset_yaml2py
 
 setup(
@@ -27,7 +27,7 @@ setup(
   description = 'user-agent classificator',
   author = 'Najeira',
   author_email = 'najeira@gmail.com',
-  url = 'https://github.com/tagomoris/woothee',
+  url = 'https://github.com/woothee/woothee-python',
   license = 'http://www.apache.org/licenses/LICENSE-2.0',
   packages = ['woothee'],
   package_dir = {'': 'lib'},

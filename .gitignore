@@ -6,7 +6,7 @@ tmtags
 .\#*
 *.swp
 tmp/
-
+build/
 *.pyc
 PyYAML*.egg
 lib/*.egg-info

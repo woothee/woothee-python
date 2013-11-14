@@ -33,7 +33,7 @@ ATTRIBUTE_LIST = [ATTRIBUTE_NAME,ATTRIBUTE_CATEGORY,ATTRIBUTE_OS,ATTRIBUTE_VENDO
 DATASET = {}
 
 def _init():
-  # GENERATED from dataset.yaml at Tue Sep 10 14:45:28 2013 by tagomoris
+  # GENERATED from dataset.yaml at Thu Nov 14 15:30:12 2013 by tagomoris
   obj = {'label': 'MSIE', 'name': 'Internet Explorer', 'type': 'browser'}
   obj['vendor'] = 'Microsoft'
   DATASET[obj['label']] = obj
