@@ -33,7 +33,7 @@ ATTRIBUTE_LIST = [ATTRIBUTE_NAME,ATTRIBUTE_CATEGORY,ATTRIBUTE_OS,ATTRIBUTE_VENDO
 DATASET = {}
 
 def _init():
-  # GENERATED from dataset.yaml at Thu Nov 14 15:30:12 2013 by tagomoris
+  # GENERATED from dataset.yaml at Tue Dec  3 19:57:30 2013 by tagomoris
   obj = {'label': 'MSIE', 'name': 'Internet Explorer', 'type': 'browser'}
   obj['vendor'] = 'Microsoft'
   DATASET[obj['label']] = obj
@@ -194,6 +194,21 @@ def _init():
   obj['vendor'] = 'Sony'
   obj['category'] = 'appliance'
   obj['os'] = 'PlayStation 3'
+  DATASET[obj['label']] = obj
+  obj = {'label': 'PS4', 'name': 'PlayStation 4', 'type': 'full'}
+  obj['vendor'] = 'Sony'
+  obj['category'] = 'appliance'
+  obj['os'] = 'PlayStation 4'
+  DATASET[obj['label']] = obj
+  obj = {'label': 'Xbox360', 'name': 'Xbox 360', 'type': 'full'}
+  obj['vendor'] = 'Microsoft'
+  obj['category'] = 'appliance'
+  obj['os'] = 'Xbox 360'
+  DATASET[obj['label']] = obj
+  obj = {'label': 'XboxOne', 'name': 'Xbox One', 'type': 'full'}
+  obj['vendor'] = 'Microsoft'
+  obj['category'] = 'appliance'
+  obj['os'] = 'Xbox One'
   DATASET[obj['label']] = obj
   obj = {'label': 'DigitalTV', 'name': 'InternetTVBrowser', 'type': 'full'}
   obj['category'] = 'appliance'

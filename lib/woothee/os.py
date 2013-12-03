@@ -7,6 +7,16 @@ from . import util
 def challenge_windows(ua, result):
   if 'Windows' not in ua:
     return False
+
+  # Xbox Series
+  if 'Xbox' in ua:
+    if 'Xbox; Xbox One)' in ua:
+      util.update_map(result, dataset.get("XboxOne"))
+    else:
+      util.update_map(result, dataset.get("Xbox360"))
+    # overwrite browser detections as appliance
+    return True
+
   data = dataset.get('Win')
   obj = re.search('Windows ([ .a-zA-Z0-9]+)[;\\)]', ua)
   if not obj:

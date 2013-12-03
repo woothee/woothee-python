@@ -10,6 +10,8 @@ def challenge_playstation(ua, result):
     data = dataset.get('PSVita')
   elif 'PLAYSTATION 3 ' in ua or 'PLAYSTATION 3;' in ua:
     data = dataset.get('PS3')
+  elif 'PlayStation 4 ' in ua:
+    data = dataset.get('PS4')
   else:
     return False
   util.update_map(result, data)
