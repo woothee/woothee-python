@@ -24,10 +24,18 @@ def challenge_safari_chrome(ua, result):
   version = dataset.VALUE_UNKNOWN
   obj = re.search('(?:Chrome|CrMo|CriOS)/([.0-9]+)', ua)
   if obj:
+    chromeVersion = obj.group(1)
+    obj = re.search('OPR/([.0-9]+)', ua)
+    if obj:
+      # Opera (blink)
+      version = obj.group(1)
+      util.update_map(result, dataset.get('Opera'))
+      util.update_version(result, version)
+      return True
+
     # Chrome
-    version = obj.group(1)
     util.update_map(result, dataset.get('Chrome'))
-    util.update_version(result, version)
+    util.update_version(result, chromeVersion)
     return True
   
   # Safari
