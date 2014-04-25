@@ -62,7 +62,7 @@ def challenge_osx(ua, result):
       data = dataset.get('iPhone')
     elif 'iPad;' in ua:
       data = dataset.get('iPad')
-    elif 'iPod;' in ua:
+    elif 'iPod' in ua:
       data = dataset.get('iPod')
   util.update_category(result, data[dataset.KEY_CATEGORY])
   util.update_os(result, data[dataset.KEY_NAME])
