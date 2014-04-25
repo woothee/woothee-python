@@ -9,6 +9,7 @@ from . import appliance
 from . import misc
 
 VERSION = (0, 4, 1)
+__version__ = '0.4.1'
 
 FILLED = {
   dataset.ATTRIBUTE_NAME: dataset.VALUE_UNKNOWN,
