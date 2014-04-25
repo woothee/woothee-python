@@ -97,7 +97,8 @@ def challenge_smartphone(ua, result):
   if dataset.KEY_NAME in result and result[dataset.KEY_NAME] == dataset.get('Firefox')[dataset.KEY_NAME]:
     # Firefox OS specific pattern
     # http://lawrencemandel.com/2012/07/27/decision-made-firefox-os-user-agent-string/
-    if re.search('^Mozilla/[.0-9]+ \(Mobile;(.*;)? rv:[.0-9]+\) Gecko/[.0-9]+ Firefox/[.0-9]+$', ua):
+    # https://github.com/woothee/woothee/issues/2
+    if re.search('^Mozilla/[.0-9]+ \((?:Mobile|Tablet);(.*;)? rv:[.0-9]+\) Gecko/[.0-9]+ Firefox/[.0-9]+$', ua):
       data = dataset.get('FirefoxOS')
 
   if not data:
