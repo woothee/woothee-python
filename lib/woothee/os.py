@@ -163,6 +163,8 @@ def challenge_misc(ua, result):
     data = dataset.get('MacOS')
   elif 'X11; FreeBSD ' in ua:
     data = dataset.get('BSD')
+  elif 'X11; CrOS ' in ua:
+    data = dataset.get('ChromeOS')
   else:
     return False
   util.update_category(result, data[dataset.KEY_CATEGORY])
