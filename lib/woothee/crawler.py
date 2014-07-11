@@ -51,6 +51,10 @@ def challenge_crawlers(ua, result):
     if 'crawler (http://listing.yahoo.co.jp/support/faq/' in ua or 'crawler (http://help.yahoo.co.jp/help/jp/' in ua:
       util.update_map(result, dataset.get('YahooJP'))
       return True
+
+    if 'Y!J-BRZ/YATSHA crawler' in ua or 'Y!J-BRY/YATSH crawler' in ua:
+      util.update_map(result, dataset.get('YahooJP'))
+      return True
     
     if 'Yahoo Pipes' in ua:
       util.update_map(result, dataset.get('YahooPipes'))
