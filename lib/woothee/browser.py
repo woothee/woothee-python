@@ -9,7 +9,7 @@ def challenge_msie(ua, result):
     return False
   version = dataset.VALUE_UNKNOWN
   msie = re.search('MSIE ([.0-9]+);', ua)
-  trident = re.search('Trident/([.0-9]+); rv:([.0-9]+)', ua)
+  trident = re.search('Trident/([.0-9]+);(?: BOIE[0-9]+;[A-Z]+;)? rv:([.0-9]+)', ua)
   if msie:
     version = msie.group(1)
   elif trident:
