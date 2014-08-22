@@ -1,6 +1,6 @@
 from setuptools import setup, Command
 
-version = "0.1.0"
+version = [s for s in open('lib/woothee/__init__.py').read().split('\n') if s.startswith('__version__ = ')][0].split(' = ')[1].replace("'", '')
 
 class dataset_command(Command):
   
