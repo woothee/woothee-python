@@ -5,15 +5,21 @@ from . import dataset
 from . import util
 
 def challenge_msie(ua, result):
-  if 'compatible; MSIE' not in ua and 'Trident/' not in ua:
+  if 'compatible; MSIE' not in ua and 'Trident/' not in ua and 'IEMobile' not in ua:
     return False
+
   version = dataset.VALUE_UNKNOWN
-  msie = re.search('MSIE ([.0-9]+);', ua)
-  trident = re.search('Trident/([.0-9]+);(?: BOIE[0-9]+;[A-Z]+;)? rv:([.0-9]+)', ua)
+  msie = re.search(r'MSIE ([.0-9]+);', ua)
+  trident = re.search(r'Trident\/([.0-9]+);(?: BOIE[0-9]+;[A-Z]+;)? rv:([.0-9]+)', ua)
+  iemobile = re.search(r'IEMobile\/([.0-9]+);', ua)
+
   if msie:
     version = msie.group(1)
   elif trident:
     version = trident.group(2)
+  elif iemobile:
+    version = iemobile.group(1)
+
   util.update_map(result, dataset.get('MSIE'))
   util.update_version(result, version)
   return True
@@ -37,7 +43,7 @@ def challenge_safari_chrome(ua, result):
     util.update_map(result, dataset.get('Chrome'))
     util.update_version(result, chromeVersion)
     return True
-  
+
   # Safari
   obj = re.search('Version/([.0-9]+)', ua)
   if obj:

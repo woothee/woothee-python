@@ -15,6 +15,7 @@ FILLED = {
   dataset.ATTRIBUTE_NAME: dataset.VALUE_UNKNOWN,
   dataset.ATTRIBUTE_CATEGORY: dataset.VALUE_UNKNOWN,
   dataset.ATTRIBUTE_OS: dataset.VALUE_UNKNOWN,
+  dataset.ATTRIBUTE_OS_VERSION: dataset.VALUE_UNKNOWN,
   dataset.ATTRIBUTE_VERSION: dataset.VALUE_UNKNOWN,
   dataset.ATTRIBUTE_VENDOR: dataset.VALUE_UNKNOWN,
 }
@@ -27,32 +28,32 @@ def is_crawler(useragent):
 
 def exec_parse(useragent):
   result = {}
-  
+
   if len(useragent) < 1 or useragent == '-':
     return result
-  
+
   if try_crawler(useragent, result):
     return result
-  
+
   if try_browser(useragent, result):
     try_os(useragent, result)
     return result
-  
+
   if try_mobilephone(useragent, result):
     return result
-  
+
   if try_appliance(useragent, result):
     return result
-  
+
   if try_misc(useragent, result):
     return result
-  
+
   # browser unknown. check os only
   if try_os(useragent, result):
     return result
-  
+
   try_rare_cases(useragent, result)
-  
+
   return result
 
 def try_crawler(useragent, result):
