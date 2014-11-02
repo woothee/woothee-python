@@ -81,7 +81,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 
-.. |travis| image:: https://travis-ci.org/tell-k/woothee-python?branch=master
+.. |travis| image:: https://travis-ci.org/tell-k/woothee-python.svg?branch=master
     :target: https://travis-ci.org/tell-k/woothee-python
 
 
