@@ -1,0 +1,5 @@
+include tox.ini
+include Makefile
+include README.rst
+recursive-include scripts *.py
+recursive-include tests *.py

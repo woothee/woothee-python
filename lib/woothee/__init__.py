@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*-
+from __future__ import (
+    division, print_function,
+    absolute_import, unicode_literals
+)
 
 from . import dataset
 from . import browser
@@ -8,8 +12,8 @@ from . import crawler
 from . import appliance
 from . import misc
 
-VERSION = (0, 4, 2)
-__version__ = '0.4.2'
+VERSION = (1, 0, 0)
+__version__ = '1.0.0'
 
 FILLED = {
     dataset.ATTRIBUTE_NAME: dataset.VALUE_UNKNOWN,

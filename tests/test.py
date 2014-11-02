@@ -1,4 +1,8 @@
 # -*- coding:utf-8 -*-
+from __future__ import (
+    division, print_function,
+    absolute_import, unicode_literals
+)
 
 import mock
 import os
@@ -82,7 +86,7 @@ class WootheeTest(unittest.TestCase):
                         r = woothee.parse(e['target'])
                         for attribute in check_attributes:
 
-                            testname = groupname + (' test({}): {}'.format(
+                            testname = groupname + (' test({0}): {1}'.format(
                                 attribute, e['target']
                             ))
                             if _can_assert(attribute, e):

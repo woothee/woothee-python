@@ -1,4 +1,9 @@
 # -*- coding: utf-8 -*-
+from __future__ import (
+    division, print_function,
+    absolute_import, unicode_literals
+)
+import six
 
 import os
 import yaml
@@ -58,6 +63,10 @@ dynamic_lines = '\n    '.join(lines)
 
 module_text = """\
 # -*- coding: utf-8 -*-
+from __future__ import (
+    division, print_function,
+    absolute_import, unicode_literals
+)
 
 KEY_LABEL = 'label'
 KEY_NAME = 'name'
@@ -110,6 +119,6 @@ def get(label):
 
 fp = open(py_file, 'wb')
 try:
-    fp.write(module_text)
+    fp.write(six.b(module_text))
 finally:
     fp.close()

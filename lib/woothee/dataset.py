@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*-
+from __future__ import (
+    division, print_function,
+    absolute_import, unicode_literals
+)
 
 KEY_LABEL = 'label'
 KEY_NAME = 'name'
@@ -40,7 +44,7 @@ DATASET = {}
 
 
 def _init():
-    # GENERATED from dataset.yaml at Fri Oct 31 23:00:38 2014 by tell_k
+    # GENERATED from dataset.yaml at Fri Oct 31 23:50:06 2014 by tell_k
     obj = {'label': 'MSIE', 'name': 'Internet Explorer', 'type': 'browser'}  # NOQA
     obj['vendor'] = 'Microsoft'
     DATASET[obj['label']] = obj
