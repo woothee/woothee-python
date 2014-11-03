@@ -33,6 +33,7 @@ setup(
   package_dir = {'': 'lib'},
   platforms = 'any',
   setup_requires = ['PyYAML>=3.10'],
+  tests_require=['mock'],
   test_suite='tests',
   cmdclass={'dataset': dataset_command},
   )

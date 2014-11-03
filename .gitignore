@@ -8,5 +8,5 @@ tmtags
 tmp/
 build/
 *.pyc
-PyYAML*.egg
+*.egg
 lib/*.egg-info
