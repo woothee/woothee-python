@@ -36,7 +36,7 @@ try:
             # obj[vendor] = 'Microsoft'
             # DATASET['MSIE'] = obj
 
-            lines.append("obj = {'label': '%s', 'name': '%s', 'type': '%s'} # NOQA"
+            lines.append("obj = {'label': '%s', 'name': '%s', 'type': '%s'}  # NOQA"
                          % (label, name, type))
             if type == 'browser':
                 lines.append("obj['vendor'] = '%s'" % dataset['vendor'])
@@ -99,13 +99,15 @@ ATTRIBUTE_LIST = [
 
 DATASET = {}
 
+
 def _init():
     %s
 
 _init()
 
+
 def get(label):
-  return DATASET[label]
+    return DATASET[label]
 """ % dynamic_lines
 
 fp = open(py_file, 'wb')

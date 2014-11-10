@@ -42,7 +42,7 @@ DATASET = {}
 
 
 def _init():
-    # GENERATED from dataset.yaml at Tue Nov  4 00:10:39 2014 by tell_k
+    # GENERATED from dataset.yaml at Tue Nov 11 00:39:38 2014 by tell_k
     obj = {'label': 'MSIE', 'name': 'Internet Explorer', 'type': 'browser'}  # NOQA
     obj['vendor'] = 'Microsoft'
     DATASET[obj['label']] = obj
