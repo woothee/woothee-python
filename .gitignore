@@ -10,3 +10,5 @@ build/
 *.pyc
 *.egg
 lib/*.egg-info
+.tox
+.coverage
