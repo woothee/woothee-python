@@ -1,8 +1,12 @@
 # -*- coding: utf-8 -*-
+from __future__ import (division, print_function,
+                        absolute_import, unicode_literals)
 
 import os
 import yaml
 import datetime
+
+import six
 
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 dataset_file = os.path.join(base_dir, 'woothee', 'dataset.yaml')
@@ -112,6 +116,6 @@ def get(label):
 
 fp = open(py_file, 'wb')
 try:
-    fp.write(module_text)
+    fp.write(six.b(module_text))
 finally:
     fp.close()
