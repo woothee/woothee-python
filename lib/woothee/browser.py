@@ -14,13 +14,14 @@ def challenge_msie(ua, result):
     version = dataset.VALUE_UNKNOWN
     msie = re.search(r'MSIE ([.0-9]+);', ua)
     trident = re.search(
-        r'Trident\/([.0-9]+);(?: BOIE[0-9]+;[A-Z]+;)? rv:([.0-9]+)', ua)
+        r'Trident\/([.0-9]+);', ua)
+    tridentVersion = re.search(r' rv:([.0-9]+)', ua)
     iemobile = re.search(r'IEMobile\/([.0-9]+);', ua)
 
     if msie:
         version = msie.group(1)
-    elif trident:
-        version = trident.group(2)
+    elif trident and tridentVersion:
+        version = tridentVersion.group(1)
     elif iemobile:
         version = iemobile.group(1)
 
