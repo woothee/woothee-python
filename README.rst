@@ -1,7 +1,7 @@
 Woothee python
 ==============
 
-|travis| |coveralls| |downloads| |version| |license|
+|travis| |coveralls| |downloads| |version|
 
 The Python implementation of Project Woothee, which is multi-language
 user-agent strings parsers.
@@ -109,14 +109,10 @@ History
     :target: https://coveralls.io/r/woothee/woothee-python
     :alt: coveralls.io
 
-.. |downloads| image:: https://pypip.in/d/woothee/badge.png
+.. |downloads| image:: https://pypip.in/d/woothee/badge.png?1
     :target: http://pypi.python.org/pypi/woothee/
     :alt: downloads
 
-.. |version| image:: https://pypip.in/v/woothee/badge.png
+.. |version| image:: https://pypip.in/v/woothee/badge.png?1
     :target: http://pypi.python.org/pypi/woothee/
     :alt: latest version
-
-.. |license| image:: https://pypip.in/license/woothee/badge.png
-    :target: http://pypi.python.org/pypi/woothee/
-    :alt: license
