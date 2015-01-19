@@ -101,12 +101,12 @@ History
 * First release
 
 
-.. |travis| image:: https://travis-ci.org/wootheee/woothee-python.svg?branch=master
-    :target: https://travis-ci.org/wootheee/woothee-python
+.. |travis| image:: https://travis-ci.org/woothee/woothee-python.svg?branch=master
+    :target: https://travis-ci.org/woothee/woothee-python
     :alt: travis-ci.org
 
-.. |coveralls| image:: https://coveralls.io/repos/wootheee/woothee-python/badge.png
-    :target: https://coveralls.io/r/wootheee/woothee-python
+.. |coveralls| image:: https://coveralls.io/repos/woothee/woothee-python/badge.png
+    :target: https://coveralls.io/r/woothee/woothee-python
     :alt: coveralls.io
 
 .. |downloads| image:: https://pypip.in/d/woothee/badge.png
