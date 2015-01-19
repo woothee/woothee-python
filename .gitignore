@@ -7,6 +7,7 @@ tmtags
 *.swp
 tmp/
 build/
+dist/
 *.pyc
 *.egg
 lib/*.egg-info
