@@ -53,9 +53,9 @@ class dataset_command(Command):
 setup(
     name='woothee',
     version=version,
-    description='Cross-language UserAgent classifier library, python implementation',
-    author='Najeira',
-    author_email='najeira@gmail.com',
+    description='Cross-language UserAgent classifier library, python implementation', # NOQA
+    author='tell-k',
+    author_email='ffk2005 at gmail dot com',
     url='https://github.com/woothee/woothee-python',
     license='http://www.apache.org/licenses/LICENSE-2.0',
     packages=find_packages('lib'),
