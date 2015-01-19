@@ -1,10 +1,19 @@
 Woothee python
 ==============
 
+|travis| |coveralls| |downloads| |version| |license|
+
 The Python implementation of Project Woothee, which is multi-language
 user-agent strings parsers.
 
 https://github.com/woothee/woothee
+
+Installation
+------------
+
+::
+
+   $ pip install sphinxjp.themes.basicstrap
 
 Usage
 -----
@@ -65,6 +74,7 @@ Authors
 
 * UEDA Tetsuhiro (najeira)
 * TAGOMORI Satoshi tagomoris@gmail.com
+* tell-k ffk2005@gmail.com
 
 License
 -------
@@ -82,3 +92,31 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+
+History
+-------
+
+1.0.0(Jan 20, 2015)
+---------------------
+* First release
+
+
+.. |travis| image:: https://travis-ci.org/wootheee/woothee-python.svg?branch=master
+    :target: https://travis-ci.org/wootheee/woothee-python
+    :alt: travis-ci.org
+
+.. |coveralls| image:: https://coveralls.io/repos/wootheee/woothee-python/badge.png
+    :target: https://coveralls.io/r/wootheee/woothee-python
+    :alt: coveralls.io
+
+.. |downloads| image:: https://pypip.in/d/woothee/badge.png
+    :target: http://pypi.python.org/pypi/woothee/
+    :alt: downloads
+
+.. |version| image:: https://pypip.in/v/woothee/badge.png
+    :target: http://pypi.python.org/pypi/woothee/
+    :alt: latest version
+
+.. |license| image:: https://pypip.in/license/woothee/badge.png
+    :target: http://pypi.python.org/pypi/woothee/
+    :alt: license
