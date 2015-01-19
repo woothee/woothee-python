@@ -13,7 +13,7 @@ Installation
 
 ::
 
-   $ pip install sphinxjp.themes.basicstrap
+   $ pip install woothee
 
 Usage
 -----
