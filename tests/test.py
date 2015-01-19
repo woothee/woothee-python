@@ -131,6 +131,19 @@ class WootheeTest(unittest.TestCase):
             "vendor": "Nintendo",
         }, woothee.parse("(Nintendo Wii; U; ; 3642; ja)"))
 
+        # 26 line lib/woothee/browser.py
+        self.assertEqual({
+            "name": "Internet Explorer",
+            "version": "11.0",
+            "os": "Windows Phone OS",
+            "os_version": "8.1",
+            "category": "smartphone",
+            "vendor": "Microsoft",
+        }, woothee.parse(
+            "Mozilla/5.0 (Windows Phone 8.1; ARM; Trident/7.0;"
+            " Touch; IEMobile/11.0; NOKIA; Lumia 930) like Gecko"
+        ))
+
         # 159 line lib/woothee/crawler.py
         self.assertEqual({
             "name": "UNKNOWN",
