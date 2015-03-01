@@ -117,7 +117,7 @@ History
     :target: http://pypi.python.org/pypi/woothee/
     :alt: downloads
 
-.. |license| image:: https://pypip.in/license/woothee/badge.png
+.. |license| image:: https://pypip.in/license/woothee/badge.png?2
     :target: http://pypi.python.org/pypi/woothee/
     :alt: license
 
