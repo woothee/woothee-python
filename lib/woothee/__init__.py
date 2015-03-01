@@ -28,14 +28,14 @@ def parse(useragent):
 
 
 def is_crawler(useragent):
-    return len(useragent) > 0 and useragent != '-'\
+    return useragent is not None and len(useragent) > 0 and useragent != '-'\
         and try_crawler(useragent, {})
 
 
 def exec_parse(useragent):
     result = {}
 
-    if len(useragent) < 1 or useragent == '-':
+    if useragent is None or len(useragent) < 1 or useragent == '-':
         return result
 
     if try_crawler(useragent, result):

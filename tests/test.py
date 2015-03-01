@@ -6,12 +6,10 @@ import mock
 import os
 import sys
 import unittest
+import yaml
 
 BASE_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(BASE_PATH, 'lib'))
-
-import yaml
-
 TESTSET_DIR = os.path.join(BASE_PATH, 'woothee', 'testsets')
 
 TARGETS = [
@@ -31,6 +29,7 @@ TARGETS = [
     ['pc_lowpriority.yaml', 'PC/LowPriority'],
     ['misc.yaml', 'Misc'],
     ['crawler_nonmajor.yaml', 'Crawler/NonMajor'],
+    ['blank.yaml', 'Blank'],
 ]
 
 
@@ -100,16 +99,6 @@ class WootheeTest(unittest.TestCase):
         # UserAgent is a dummy that does not exist in the world.
 
         import woothee
-
-        # 33 line lib/woothee/__init__.py
-        self.assertEqual({
-            "name": "UNKNOWN",
-            "version": "UNKNOWN",
-            "os": "UNKNOWN",
-            "os_version": "UNKNOWN",
-            "category": "UNKNOWN",
-            "vendor": "UNKNOWN",
-        }, woothee.parse(""))
 
         # 48 line in lib/woothee/appliance.py
         self.assertEqual({
@@ -268,6 +257,7 @@ class TestIsCrawler(unittest.TestCase):
     def test_false(self):
         self.assertFalse(self._callFUT(""))
         self.assertFalse(self._callFUT("-"))
+        self.assertFalse(self._callFUT(None))
         self.assertFalse(self._callFUT(
             "Mozilla/5.0 (Windows NT 6.3; "
             "Trident/7.0; rv:11.0) like Gecko"
