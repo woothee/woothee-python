@@ -10,8 +10,8 @@ from . import crawler
 from . import appliance
 from . import misc
 
-VERSION = (1, 0, 0)
-__version__ = '1.0.0'
+VERSION = (1, 1, 0)
+__version__ = '1.1.0'
 
 FILLED = {
     dataset.ATTRIBUTE_NAME: dataset.VALUE_UNKNOWN,

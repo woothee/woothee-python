@@ -31,7 +31,7 @@ classifiers = [
 ]
 
 
-class dataset_command(Command):
+class DatasetCommand(Command):
 
     description = 'generate dataset.py'
     user_options = []
@@ -57,7 +57,7 @@ setup(
     author='tell-k',
     author_email='ffk2005 at gmail dot com',
     url='https://github.com/woothee/woothee-python',
-    license='http://www.apache.org/licenses/LICENSE-2.0',
+    license='Apache License 2.0',
     packages=find_packages('lib'),
     package_dir={'': 'lib'},
     platforms='any',
@@ -67,5 +67,6 @@ setup(
     test_suite='tests',
     long_description=long_description,
     classifiers=classifiers,
-    cmdclass={'dataset': dataset_command},
+    keywords=['web', 'user-agent', 'parser'],
+    cmdclass={'dataset': DatasetCommand},
 )

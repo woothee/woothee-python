@@ -1,7 +1,7 @@
 Woothee python
 ==============
 
-|travis| |coveralls| |downloads| |version|
+|travis| |coveralls| |downloads| |version| |license|
 
 The Python implementation of Project Woothee, which is multi-language
 user-agent strings parsers.
@@ -96,6 +96,10 @@ limitations under the License.
 History
 -------
 
+1.1.0(Mar 1, 2015)
+~~~~~~~~~~~~~~~~~~~~
+* `#9 Test blank cases <https://github.com/woothee/woothee-python/pull/9>`_ Thanks to yuya-takeyama.
+
 1.0.0(Jan 20, 2015)
 ~~~~~~~~~~~~~~~~~~~~
 * First release
@@ -109,10 +113,14 @@ History
     :target: https://coveralls.io/r/woothee/woothee-python
     :alt: coveralls.io
 
-.. |downloads| image:: https://pypip.in/d/woothee/badge.png?1
+.. |downloads| image:: https://pypip.in/d/woothee/badge.png
     :target: http://pypi.python.org/pypi/woothee/
     :alt: downloads
 
-.. |version| image:: https://pypip.in/v/woothee/badge.png?1
+.. |license| image:: https://pypip.in/license/woothee/badge.png
+    :target: http://pypi.python.org/pypi/woothee/
+    :alt: license
+
+.. |version| image:: https://pypip.in/v/woothee/badge.png
     :target: http://pypi.python.org/pypi/woothee/
     :alt: latest version
