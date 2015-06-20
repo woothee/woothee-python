@@ -113,14 +113,14 @@ History
     :target: https://coveralls.io/r/woothee/woothee-python
     :alt: coveralls.io
 
-.. |downloads| image:: https://pypip.in/d/woothee/badge.png
+.. |downloads| image:: https://img.shields.io/pypi/dm/woothee.svg
     :target: http://pypi.python.org/pypi/woothee/
     :alt: downloads
 
-.. |license| image:: https://pypip.in/license/woothee/badge.png?2
-    :target: http://pypi.python.org/pypi/woothee/
-    :alt: license
-
-.. |version| image:: https://pypip.in/v/woothee/badge.png
+.. |version| image:: https://img.shields.io/pypi/v/woothee.svg
     :target: http://pypi.python.org/pypi/woothee/
     :alt: latest version
+
+.. |license| image:: https://img.shields.io/pypi/l/woothee.svg
+    :target: http://pypi.python.org/pypi/woothee/
+    :alt: license
