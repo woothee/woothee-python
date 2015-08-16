@@ -32,7 +32,9 @@ def challenge_windows(ua, result):
     winphone_regex = re.compile(r"^Phone(?: OS)? ([.0-9]+)")
     winphone_matched = winphone_regex.search(version)
 
-    if version == 'NT 6.3':
+    if version == 'NT 10.0':
+        data = dataset.get('Win10')
+    elif version == 'NT 6.3':
         data = dataset.get('Win8.1')
     elif version == 'NT 6.2':
         data = dataset.get('Win8')
@@ -130,7 +132,7 @@ def challenge_smartphone(ua, result):
     elif 'CFNetwork' in ua:
         data = dataset.get('iOS')
     elif 'BB10' in ua:
-        data = dataset.get('BlackBerry')
+        data = dataset.get('BlackBerry10')
         regex = re.compile(r"BB10(?:.+)Version\/([.0-9]+)")
         m = regex.search(ua)
         if m:
