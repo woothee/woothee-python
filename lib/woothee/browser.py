@@ -94,10 +94,22 @@ def challenge_opera(ua, result):
     return True
 
 
+def challenge_webview(ua, result):
+    obj = re.search('iP(?:hone;|ad;|od) .*like Mac OS X', ua)
+    # iOS
+    if not obj or 'Safari/' in ua:
+        return False
+
+    obj = re.search('/Version\/([.0-9]+)/', ua)
+    version = obj.group(1) if obj else dataset.VALUE_UNKNOWN
+    util.update_map(result, dataset.get('Webview'))
+    util.update_version(result, version)
+    return True
+
+
 def challenge_sleipnir(ua, result):
     if 'Sleipnir/' not in ua:
         return False
-
     obj = re.search('Sleipnir/([.0-9]+)', ua)
     version = obj.group(1) if obj else dataset.VALUE_UNKNOWN
     util.update_map(result, dataset.get('Sleipnir'))
