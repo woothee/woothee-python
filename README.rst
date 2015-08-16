@@ -96,6 +96,14 @@ limitations under the License.
 History
 -------
 
+1.2.0(Aug 16, 2015)
+~~~~~~~~~~~~~~~~~~~~
+
+* Add support for Twitterbot
+* Add support for webviews of mobile devices
+* Add support for Windows 10 and Edge browser
+* Add support for BlackBerry10
+
 1.1.0(Mar 1, 2015)
 ~~~~~~~~~~~~~~~~~~~~
 * `#9 Test blank cases <https://github.com/woothee/woothee-python/pull/9>`_ Thanks to yuya-takeyama.
