@@ -34,6 +34,15 @@ def challenge_safari_chrome(ua, result):
     if 'Safari/' not in ua:
         return False
     version = dataset.VALUE_UNKNOWN
+
+    # Edge
+    obj = re.search('/Edge\/([.0-9]+)/o', ua)
+    if obj:
+        version = obj.group(1)
+        util.update_map(result, dataset.get('Edge'))
+        util.update_version(result, version)
+        return True
+
     obj = re.search('(?:Chrome|CrMo|CriOS)/([.0-9]+)', ua)
     if obj:
         chromeVersion = obj.group(1)
@@ -88,6 +97,7 @@ def challenge_opera(ua, result):
 def challenge_sleipnir(ua, result):
     if 'Sleipnir/' not in ua:
         return False
+
     obj = re.search('Sleipnir/([.0-9]+)', ua)
     version = obj.group(1) if obj else dataset.VALUE_UNKNOWN
     util.update_map(result, dataset.get('Sleipnir'))
