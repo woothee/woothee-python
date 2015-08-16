@@ -95,6 +95,10 @@ def challenge_crawlers(ua, result):
         util.update_map(result, dataset.get('facebook'))
         return True
 
+    if 'Twitterbot/' in ua:
+        util.update_map(result, dataset.get('twitter'))
+        return True
+
     if 'ichiro' in ua:
         if 'http://help.goo.ne.jp/door/crawler.html' in ua\
                 or 'compatible; ichiro/mobile goo;' in ua:
