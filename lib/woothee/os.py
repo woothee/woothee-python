@@ -135,6 +135,12 @@ def challenge_smartphone(ua, result):
         m = regex.search(ua)
         if m:
             os_version = m.group(1)
+    elif 'BB10' in ua:
+        data = dataset.get('BlackBerry')
+        regex = re.compile(r"BB10(?:.+)Version\/([.0-9]+)")
+        m = regex.search(ua)
+        if m:
+            os_version = m.group(1)
 
     if result.get(dataset.KEY_NAME) ==\
             dataset.get('Firefox')[dataset.KEY_NAME]:
