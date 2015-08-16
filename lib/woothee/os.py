@@ -129,15 +129,15 @@ def challenge_smartphone(ua, result):
         data = dataset.get('Android')
     elif 'CFNetwork' in ua:
         data = dataset.get('iOS')
-    elif 'BlackBerry' in ua:
-        data = dataset.get('BlackBerry')
-        regex = re.compile(r"BlackBerry(?:\d+)\/([.0-9]+) ")
-        m = regex.search(ua)
-        if m:
-            os_version = m.group(1)
     elif 'BB10' in ua:
         data = dataset.get('BlackBerry')
         regex = re.compile(r"BB10(?:.+)Version\/([.0-9]+)")
+        m = regex.search(ua)
+        if m:
+            os_version = m.group(1)
+    elif 'BlackBerry' in ua:
+        data = dataset.get('BlackBerry')
+        regex = re.compile(r"BlackBerry(?:\d+)\/([.0-9]+) ")
         m = regex.search(ua)
         if m:
             os_version = m.group(1)
