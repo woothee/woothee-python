@@ -96,6 +96,11 @@ limitations under the License.
 History
 -------
 
+1.3.0(Jan 7, 2016)
+~~~~~~~~~~~~~~~~~~~~
+
+* Add suuport for Firefox for iOS
+
 1.2.0(Aug 16, 2015)
 ~~~~~~~~~~~~~~~~~~~~
 
