@@ -43,6 +43,13 @@ def challenge_safari_chrome(ua, result):
         util.update_version(result, version)
         return True
 
+    obj = re.search('FxiOS\/([.0-9]+)', ua)
+    if obj:
+        version = obj.group(1)
+        util.update_map(result, dataset.get('Firefox'))
+        util.update_version(result, version)
+        return True
+
     obj = re.search('(?:Chrome|CrMo|CriOS)/([.0-9]+)', ua)
     if obj:
         chromeVersion = obj.group(1)
