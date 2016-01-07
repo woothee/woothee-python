@@ -1,5 +1,5 @@
 language: python
-python: 3.4
+python: 3.5
 env:
   matrix:
    - TOXENV=py26
@@ -7,6 +7,7 @@ env:
    - TOXENV=py32
    - TOXENV=py33
    - TOXENV=py34
+   - TOXENV=py35
    - TOXENV=pypy
    - TOXENV=flake8
 before_install:
@@ -14,7 +15,7 @@ before_install:
   - python setup.py dataset
 install:
   - pip install tox
-  - if test "$TOXENV" = py34 ; then pip install coveralls ; fi
+  - if test "$TOXENV" = py35 ; then pip install coveralls ; fi
 script: tox
 after_script:
-  - if test "$TOXENV" = py34 ; then coveralls ; fi
+  - if test "$TOXENV" = py35 ; then coveralls ; fi
