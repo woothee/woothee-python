@@ -16,6 +16,7 @@ before_install:
 install:
   - pip install tox
   - if test "$TOXENV" = py35 ; then pip install coveralls ; fi
+  - if test "$TOXENV" = py32 ; then pip install "virtualenv<14.0.0" ; fi
 script: tox
 after_script:
   - if test "$TOXENV" = py35 ; then coveralls ; fi
