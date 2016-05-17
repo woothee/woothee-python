@@ -128,3 +128,14 @@ def challenge_sleipnir(ua, result):
     util.update_category(result, win[dataset.KEY_CATEGORY])
     util.update_os(result, win[dataset.KEY_NAME])
     return True
+
+
+def challenge_vivaldi(ua, result):
+    if 'Vivaldi/' not in ua:
+        return False
+
+    obj = re.search('Vivaldi/([.0-9]+)', ua)
+    version = obj.group(1) if obj else dataset.VALUE_UNKNOWN
+    util.update_map(result, dataset.get('Vivaldi'))
+    util.update_version(result, version)
+    return True

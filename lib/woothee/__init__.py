@@ -74,6 +74,8 @@ def try_crawler(useragent, result):
 def try_browser(useragent, result):
     if browser.challenge_msie(useragent, result):
         return True
+    if browser.challenge_vivaldi(useragent, result):
+        return True
     if browser.challenge_safari_chrome(useragent, result):
         return True
     if browser.challenge_firefox(useragent, result):
