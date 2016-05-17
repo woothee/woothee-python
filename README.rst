@@ -96,6 +96,11 @@ limitations under the License.
 History
 -------
 
+1.4.0(May 17, 2016)
+~~~~~~~~~~~~~~~~~~~~
+
+* Add suuport for Vivaldi
+
 1.3.0(Jan 7, 2016)
 ~~~~~~~~~~~~~~~~~~~~
 
