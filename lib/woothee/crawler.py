@@ -76,6 +76,10 @@ def challenge_crawlers(ua, result):
             util.update_map(result, dataset.get('bingbot'))
             return True
 
+    if 'BingPreview' in ua:
+        util.update_map(result, dataset.get('BingPreview'))
+        return True
+
     if 'Baidu' in ua:
         if 'compatible; Baiduspider' in ua\
                 or 'Baiduspider+' in ua or 'Baiduspider-image+' in ua:
