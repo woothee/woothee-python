@@ -96,6 +96,11 @@ limitations under the License.
 History
 -------
 
+1.5.0(Aug 16, 2016)
+~~~~~~~~~~~~~~~~~~~~
+
+* `#11 Support BingPreview <https://github.com/woothee/woothee-python/pull/11>`_ Thanks to taise.
+
 1.4.0(May 17, 2016)
 ~~~~~~~~~~~~~~~~~~~~
 

@@ -10,8 +10,8 @@ from . import crawler
 from . import appliance
 from . import misc
 
-VERSION = (1, 4, 0)
-__version__ = '1.4.0'
+VERSION = (1, 5, 0)
+__version__ = '1.5.0'
 
 FILLED = {
     dataset.ATTRIBUTE_NAME: dataset.VALUE_UNKNOWN,
@@ -28,8 +28,7 @@ def parse(useragent):
 
 
 def is_crawler(useragent):
-    return useragent and useragent != '-'\
-        and try_crawler(useragent, {})
+    return useragent and useragent != '-' and try_crawler(useragent, {})
 
 
 def exec_parse(useragent):
