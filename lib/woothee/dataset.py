@@ -42,7 +42,7 @@ DATASET = {}
 
 
 def _init():
-    # GENERATED from dataset.yaml at Tue May 17 15:49:48 2016 by tell_k
+    # GENERATED from dataset.yaml at Sun Aug 14 15:48:54 2016 by taise
     obj = {'label': 'MSIE', 'name': 'Internet Explorer', 'type': 'browser'}  # NOQA
     obj['vendor'] = 'Microsoft'
     DATASET[obj['label']] = obj
@@ -293,6 +293,9 @@ def _init():
     obj['category'] = 'crawler'
     DATASET[obj['label']] = obj
     obj = {'label': 'bingbot', 'name': 'bingbot', 'type': 'full'}  # NOQA
+    obj['category'] = 'crawler'
+    DATASET[obj['label']] = obj
+    obj = {'label': 'BingPreview', 'name': 'BingPreview', 'type': 'full'}  # NOQA
     obj['category'] = 'crawler'
     DATASET[obj['label']] = obj
     obj = {'label': 'Yeti', 'name': 'Naver Yeti', 'type': 'full'}  # NOQA
