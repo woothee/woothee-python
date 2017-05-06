@@ -104,6 +104,7 @@ History
 * Add support for trendictionbot crawler.
 * Add support for Yeti 1.1.
 * Compatible with Python 3.6.
+* **Caution. We'll drop Python2.6 and python3.2 support in the next version.**
 
 1.5.0(Aug 16, 2016)
 ~~~~~~~~~~~~~~~~~~~~
