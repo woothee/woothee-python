@@ -87,8 +87,10 @@ def challenge_crawlers(ua, result):
             return True
 
     if 'Yeti' in ua:
-        yeti_urls = ['http://help.naver.com/robots', 'http://help.naver.com/support/robots.html', 'http://naver.me/bot']  # NOQA
-        if any([url in ua for url in yeti_urls]):
+        if 'http://help.naver.com/robots' in ua\
+                or 'http://naver.me/bot' in ua\
+                or 'http://help.naver.com/support/robots.html' in ua:
+
             util.update_map(result, dataset.get('Yeti'))
             return True
 
