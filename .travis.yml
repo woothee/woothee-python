@@ -1,22 +1,23 @@
 language: python
-env:
-  matrix:
-   - TOXENV=py26
-   - TOXENV=py27
-   - TOXENV=py32
-   - TOXENV=py33
-   - TOXENV=py34
-   - TOXENV=py35
-   - TOXENV=py36
-   - TOXENV=pypy
-   - TOXENV=flake8
+python:
+  - "2.6"
+  - "2.7"
+  - "3.2"
+  - "3.3"
+  - "3.4"
+  - "3.5"
+  - "3.6"
+  - "pypy"
 before_install:
   - git submodule update --init
   - python setup.py dataset
 install:
   - pip install tox
-  - if test "$TOXENV" = py36 ; then pip install coveralls ; fi
-  - if test "$TOXENV" = py32 ; then pip install "virtualenv<14.0.0" ; fi
-script: tox
+  - pip install tox-travis
+  - if test "$TRAVIS_PYTHON_VERSION" = 3.6 ; then pip install coveralls ; fi
+  - if test "$TRAVIS_PYTHON_VERSION" = 3.2 ; then pip install "virtualenv<14.0.0" ; fi
+script: 
+  - tox
+  - if test "$TRAVIS_PYTHON_VERSION" = 3.6 ; then tox -e flake8 ; fi
 after_script:
-  - if test "$TOXENV" = py36 ; then coveralls ; fi
+  - if test "$TRAVIS_PYTHON_VERSION" = 3.6 ; then coveralls ; fi
