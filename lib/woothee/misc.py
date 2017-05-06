@@ -50,6 +50,8 @@ def challenge_http_library(ua, result):
                    ua) or re.search('(?:PEAR |)HTTP_Request(?: class|2)', ua):
 
         data, version = dataset.get('HTTPLibrary'), 'php'
+    elif ua.startswith('curl/'):
+        data, version = dataset.get('HTTPLibrary'), 'curl'
     else:
         return False
     util.update_map(result, data)
