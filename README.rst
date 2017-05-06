@@ -1,7 +1,7 @@
 Woothee python
 ==============
 
-|travis| |coveralls| |downloads| |version| |license|
+|travis| |coveralls| |version| |license|
 
 The Python implementation of Project Woothee, which is multi-language
 user-agent strings parsers.
@@ -96,6 +96,16 @@ limitations under the License.
 History
 -------
 
+1.7.0(May 7, 2017)
+~~~~~~~~~~~~~~~~~~~~
+
+* Add support for WebView on Android.
+* Add support for curl.
+* Add support for trendictionbot crawler.
+* Add support for Yeti 1.1.
+* Compatible with Python 3.6.
+* **Caution. We'll drop Python2.6 and python3.2 support in the next version.**
+
 1.5.0(Aug 16, 2016)
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -104,12 +114,12 @@ History
 1.4.0(May 17, 2016)
 ~~~~~~~~~~~~~~~~~~~~
 
-* Add suuport for Vivaldi
+* Add support for Vivaldi
 
 1.3.0(Jan 7, 2016)
 ~~~~~~~~~~~~~~~~~~~~
 
-* Add suuport for Firefox for iOS
+* Add support for Firefox for iOS
 
 1.2.0(Aug 16, 2015)
 ~~~~~~~~~~~~~~~~~~~~
@@ -135,10 +145,6 @@ History
 .. |coveralls| image:: https://coveralls.io/repos/woothee/woothee-python/badge.png
     :target: https://coveralls.io/r/woothee/woothee-python
     :alt: coveralls.io
-
-.. |downloads| image:: https://img.shields.io/pypi/dm/woothee.svg
-    :target: http://pypi.python.org/pypi/woothee/
-    :alt: downloads
 
 .. |version| image:: https://img.shields.io/pypi/v/woothee.svg
     :target: http://pypi.python.org/pypi/woothee/

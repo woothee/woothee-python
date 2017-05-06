@@ -33,6 +33,9 @@ def challenge_msie(ua, result):
 def challenge_safari_chrome(ua, result):
     if 'Safari/' not in ua:
         return False
+    if 'Chrome' in ua and 'wv' in ua:
+        return False
+
     version = dataset.VALUE_UNKNOWN
 
     # Edge
@@ -102,8 +105,17 @@ def challenge_opera(ua, result):
 
 
 def challenge_webview(ua, result):
-    obj = re.search('iP(?:hone;|ad;|od) .*like Mac OS X', ua)
+
+    # Android(Lollipop and Above)
+    if 'Chrome' in ua and 'wv' in ua:
+        obj = re.search('Version/([.0-9]+)', ua)
+        version = obj.group(1) if obj else dataset.VALUE_UNKNOWN
+        util.update_map(result, dataset.get('Webview'))
+        util.update_version(result, version)
+        return True
+
     # iOS
+    obj = re.search('iP(?:hone;|ad;|od) .*like Mac OS X', ua)
     if not obj or 'Safari/' in ua:
         return False
 
