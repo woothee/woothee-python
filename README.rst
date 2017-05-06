@@ -99,6 +99,7 @@ History
 1.7.0(May 7, 2017)
 ~~~~~~~~~~~~~~~~~~~~
 
+* `#12 Release v1.7.0 <https://github.com/woothee/woothee-python/pull/12>`_
 * Add support for WebView on Android.
 * Add support for curl.
 * Add support for trendictionbot crawler.
