@@ -292,5 +292,6 @@ class TestTryRareCases(unittest.TestCase):
         self.assertEqual({'category': 'smartphone', 'os': 'iOS'}, result)
         self.assertFalse(mock_sleipnir.called)
 
+
 if __name__ == '__main__':
     unittest.main()
