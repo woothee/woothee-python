@@ -21,11 +21,11 @@ matrix:
       env: TOXENV=flake8
 before_install:
   - git submodule update --init
-  - python setup.py dataset
 install:
   - pip install tox
   - if test "$TOXENV" = py36 ; then pip install coveralls ; fi
   - if test "$TOXENV" = py32 ; then pip install --upgrade "virtualenv<14.0.0" "setuptools<30.0.0"; fi
+  - python setup.py dataset
 script: 
   - tox
 after_script:
