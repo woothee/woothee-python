@@ -156,6 +156,10 @@ def challenge_crawlers(ua, result):
             util.update_map(result, dataset.get('IndyLibrary'))
             return True
 
+    if 'trendictionbot' in ua:
+        util.update_map(result, dataset.get('trendictionbot'))
+        return True
+
     return False
 
 
