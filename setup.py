@@ -56,7 +56,7 @@ setup(
     version=version,
     description='Cross-language UserAgent classifier library, python implementation', # NOQA
     author='tell-k',
-    author_email='ffk2005 at gmail dot com',
+    author_email='ffk2005@gmail.com',
     url='https://github.com/woothee/woothee-python',
     license='Apache License 2.0',
     packages=find_packages('lib'),
