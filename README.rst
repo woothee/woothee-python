@@ -96,6 +96,11 @@ limitations under the License.
 History
 -------
 
+1.8.0(Jul 5, 2017)
+~~~~~~~~~~~~~~~~~~~~
+
+* `#13 Add support for Yandex Browser <https://github.com/woothee/woothee-python/pull/13>`_. Thanks to hhatto .
+
 1.7.0(May 7, 2017)
 ~~~~~~~~~~~~~~~~~~~~
 
