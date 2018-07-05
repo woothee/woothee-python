@@ -30,6 +30,18 @@ def challenge_msie(ua, result):
     return True
 
 
+def challenge_yandexbrowser(ua, result):
+    if 'YaBrowser/' not in ua:
+        return False
+    obj = re.search('YaBrowser/(\d+\.\d+\.\d+\.\d+)', ua)
+    if not obj:
+        return False
+    version = obj.group(1)
+    util.update_map(result, dataset.get('YaBrowser'))
+    util.update_version(result, version)
+    return True
+
+
 def challenge_safari_chrome(ua, result):
     if 'Safari/' not in ua:
         return False
