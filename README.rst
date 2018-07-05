@@ -99,6 +99,7 @@ History
 1.8.0(Jul 5, 2017)
 ~~~~~~~~~~~~~~~~~~~~
 
+* `#14 Drop support Python 2.6 and Python 3.2 <https://github.com/woothee/woothee-python/pull/14>`_.
 * `#13 Add support for Yandex Browser <https://github.com/woothee/woothee-python/pull/13>`_. Thanks to hhatto .
 
 1.7.0(May 7, 2017)
