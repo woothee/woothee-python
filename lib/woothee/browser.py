@@ -34,9 +34,7 @@ def challenge_yandexbrowser(ua, result):
     if 'YaBrowser/' not in ua:
         return False
     obj = re.search('YaBrowser/(\d+\.\d+\.\d+\.\d+)', ua)
-    if not obj:
-        return False
-    version = obj.group(1)
+    version = obj.group(1) if obj else dataset.VALUE_UNKNOWN
     util.update_map(result, dataset.get('YaBrowser'))
     util.update_version(result, version)
     return True
