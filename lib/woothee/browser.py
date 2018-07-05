@@ -33,7 +33,7 @@ def challenge_msie(ua, result):
 def challenge_yandexbrowser(ua, result):
     if 'YaBrowser/' not in ua:
         return False
-    obj = re.search('YaBrowser/(\d+\.\d+\.\d+\.\d+)', ua)
+    obj = re.search(r'YaBrowser/(\d+\.\d+\.\d+\.\d+)', ua)
     version = obj.group(1) if obj else dataset.VALUE_UNKNOWN
     util.update_map(result, dataset.get('YaBrowser'))
     util.update_version(result, version)
@@ -49,14 +49,14 @@ def challenge_safari_chrome(ua, result):
     version = dataset.VALUE_UNKNOWN
 
     # Edge
-    obj = re.search('Edge\/([.0-9]+)', ua)
+    obj = re.search(r'Edge\/([.0-9]+)', ua)
     if obj:
         version = obj.group(1)
         util.update_map(result, dataset.get('Edge'))
         util.update_version(result, version)
         return True
 
-    obj = re.search('FxiOS\/([.0-9]+)', ua)
+    obj = re.search(r'FxiOS\/([.0-9]+)', ua)
     if obj:
         version = obj.group(1)
         util.update_map(result, dataset.get('Firefox'))
@@ -129,7 +129,7 @@ def challenge_webview(ua, result):
     if not obj or 'Safari/' in ua:
         return False
 
-    obj = re.search('Version\/([.0-9]+)', ua)
+    obj = re.search(r'Version\/([.0-9]+)', ua)
     version = obj.group(1) if obj else dataset.VALUE_UNKNOWN
     util.update_map(result, dataset.get('Webview'))
     util.update_version(result, version)
