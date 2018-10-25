@@ -16,7 +16,7 @@ def challenge_docomo(ua, result):
     if obj:
         version = obj.group(1)
     else:
-        obj = re.search('\(([^;)]+);FOMA;', ua)
+        obj = re.search(r'\(([^;)]+);FOMA;', ua)
         if obj:
             version = obj.group(1)
 
