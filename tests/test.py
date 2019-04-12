@@ -7,8 +7,10 @@ import os
 import sys
 import yaml
 
+from typing import Dict
+
 BASE_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, os.path.join(BASE_PATH, 'lib'))
+sys.path.insert(0, os.path.join(BASE_PATH, 'lib'))  # type: ignore
 TESTSET_DIR = os.path.join(BASE_PATH, 'woothee', 'testsets')
 
 TARGETS = [
@@ -281,7 +283,7 @@ class TestTryRareCases:
 
     @mock.patch("woothee.browser.challenge_sleipnir")
     def test_challenge_smartphone_patterns(self, mock_sleipnir):
-        result = {}
+        result = {} # type: Dict[str, str]
         assert self._callFUT("CFNetwork/", result)
         assert {'category': 'smartphone', 'os': 'iOS'} == result
         assert not mock_sleipnir.called
