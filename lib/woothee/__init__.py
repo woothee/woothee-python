@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import (division, print_function,
                         absolute_import, unicode_literals)
+from typing import Dict
 
 from . import dataset
 from . import browser
@@ -32,7 +33,7 @@ def is_crawler(useragent):
 
 
 def exec_parse(useragent):
-    result = {}
+    result = {}  # type: Dict[str, str]
 
     if not useragent or useragent == '-':
         return result
