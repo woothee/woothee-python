@@ -7,7 +7,7 @@ import os
 import sys
 import yaml
 
-from typing import Dict
+from typing import Dict  # NOQA
 
 BASE_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(BASE_PATH, 'lib'))  # type: ignore
@@ -283,7 +283,7 @@ class TestTryRareCases:
 
     @mock.patch("woothee.browser.challenge_sleipnir")
     def test_challenge_smartphone_patterns(self, mock_sleipnir):
-        result = {} # type: Dict[str, str]
+        result = {}  # type: Dict[str, str]
         assert self._callFUT("CFNetwork/", result)
         assert {'category': 'smartphone', 'os': 'iOS'} == result
         assert not mock_sleipnir.called
