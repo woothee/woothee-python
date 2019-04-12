@@ -62,7 +62,7 @@ setup(
     packages=find_packages('lib'),
     package_dir={'': 'lib'},
     platforms='any',
-    install_requires=['six>=1.8.0'],
+    install_requires=['six>=1.8.0', 'typing'],
     setup_requires=['PyYAML>=3.10', 'six>=1.8.0', 'pytest-runner'],
     tests_require=['mock', 'pytest', 'pytest-cov'],
     long_description=long_description,
