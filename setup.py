@@ -2,6 +2,7 @@
 
 import os
 import re
+import sys
 from setuptools import setup, Command, find_packages
 
 
@@ -32,6 +33,12 @@ classifiers = [
 ]
 
 
+install_requires = ['six>=1.8.0']
+
+if sys.version_info < (3, 5):
+    install_requires.append('typing')
+
+
 class DatasetCommand(Command):
 
     description = 'generate dataset.py'
@@ -51,10 +58,11 @@ class DatasetCommand(Command):
         sys.path.insert(0, scripts_dir)
         import dataset_yaml2py  # NOQA
 
+
 setup(
     name='woothee',
     version=version,
-    description='Cross-language UserAgent classifier library, python implementation', # NOQA
+    description='Cross-language UserAgent classifier library, python implementation',  # NOQA
     author='tell-k',
     author_email='ffk2005@gmail.com',
     url='https://github.com/woothee/woothee-python',
@@ -62,9 +70,9 @@ setup(
     packages=find_packages('lib'),
     package_dir={'': 'lib'},
     platforms='any',
-    install_requires=['six>=1.8.0', 'typing'],
+    install_requires=install_requires,
     setup_requires=['PyYAML>=3.10', 'six>=1.8.0', 'pytest-runner'],
-    tests_require=['mock', 'pytest', 'pytest-cov'],
+    tests_require=['pytest', 'pytest-cov', 'pytest-mock'],
     long_description=long_description,
     classifiers=classifiers,
     keywords=['web', 'user-agent', 'parser'],
