@@ -37,7 +37,7 @@ TARGETS = [
 def gen_test_cases():
     for filename, groupname in TARGETS:
         with open(os.path.join(TESTSET_DIR, filename), 'rb') as fp:
-            for test_cases in yaml.load_all(fp):
+            for test_cases in yaml.safe_load_all(fp):
                 for test_case in test_cases:
                     yield groupname, test_case
 
