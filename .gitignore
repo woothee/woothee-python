@@ -14,3 +14,5 @@ lib/*.egg-info
 .tox
 .coverage
 .eggs
+.mypy_cache
+venv

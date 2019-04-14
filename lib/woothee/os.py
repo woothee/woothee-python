@@ -105,7 +105,7 @@ def challenge_linux(ua, result):
     os_version = None
     if 'Android' in ua:
         data = dataset.get('Android')
-        regex = re.compile(r"Android[- ](\d+\.\d+(?:\.\d+)?)")
+        regex = re.compile(r"Android[- ](\d+(?:\.\d+(?:\.\d+)?)?)")
         m = regex.search(ua)
         if m:
             os_version = m.group(1)

@@ -26,7 +26,7 @@ lines = [timestamp]
 
 fp = open(dataset_file, 'rb')
 try:
-    for datasets in yaml.load_all(fp):
+    for datasets in yaml.safe_load_all(fp):
         for dataset in datasets:
             label = dataset['label']
             name = dataset['name']

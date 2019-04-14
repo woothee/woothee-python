@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import (division, print_function,
                         absolute_import, unicode_literals)
+from typing import Dict
 
 from . import dataset
 from . import browser
@@ -10,8 +11,8 @@ from . import crawler
 from . import appliance
 from . import misc
 
-VERSION = (1, 8, 0)
-__version__ = '1.8.0'
+VERSION = (1, 10, 0)
+__version__ = '1.10.0'
 
 FILLED = {
     dataset.ATTRIBUTE_NAME: dataset.VALUE_UNKNOWN,
@@ -32,7 +33,7 @@ def is_crawler(useragent):
 
 
 def exec_parse(useragent):
-    result = {}
+    result = {}  # type: Dict[str, str]
 
     if not useragent or useragent == '-':
         return result

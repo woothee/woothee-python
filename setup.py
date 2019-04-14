@@ -2,6 +2,7 @@
 
 import os
 import re
+import sys
 from setuptools import setup, Command, find_packages
 
 
@@ -20,16 +21,22 @@ classifiers = [
     "Operating System :: OS Independent",
     "Programming Language :: Python",
     "Programming Language :: Python :: 2",
-    "Programming Language :: Python :: 2.6",
     "Programming Language :: Python :: 2.7",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.2",
     "Programming Language :: Python :: 3.3",
     "Programming Language :: Python :: 3.4",
     "Programming Language :: Python :: 3.5",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
     "Topic :: Internet :: WWW/HTTP",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
+
+
+install_requires = ['six>=1.8.0']
+
+if sys.version_info < (3, 5):
+    install_requires.append('typing')
 
 
 class DatasetCommand(Command):
@@ -51,21 +58,24 @@ class DatasetCommand(Command):
         sys.path.insert(0, scripts_dir)
         import dataset_yaml2py  # NOQA
 
+
 setup(
     name='woothee',
     version=version,
-    description='Cross-language UserAgent classifier library, python implementation', # NOQA
+    description='Cross-language UserAgent classifier library, python implementation',  # NOQA
     author='tell-k',
     author_email='ffk2005@gmail.com',
     url='https://github.com/woothee/woothee-python',
     license='Apache License 2.0',
     packages=find_packages('lib'),
     package_dir={'': 'lib'},
+    package_data={
+        'woothee': ['py.typed', '*.pyi'],
+    },
     platforms='any',
-    install_requires=["six>=1.8.0"],
-    setup_requires=['PyYAML>=3.10', "six>=1.8.0"],
-    tests_require=['mock'],
-    test_suite='tests',
+    install_requires=install_requires,
+    setup_requires=['PyYAML>=3.10', 'six>=1.8.0', 'pytest-runner'],
+    tests_require=['pytest', 'pytest-cov', 'pytest-mock'],
     long_description=long_description,
     classifiers=classifiers,
     keywords=['web', 'user-agent', 'parser'],

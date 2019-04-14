@@ -49,7 +49,7 @@ def challenge_safari_chrome(ua, result):
     version = dataset.VALUE_UNKNOWN
 
     # Edge
-    obj = re.search(r'Edge\/([.0-9]+)', ua)
+    obj = re.search(r'(?:Edge|Edg|EdgiOS|EdgA)\/([.0-9]+)', ua)
     if obj:
         version = obj.group(1)
         util.update_map(result, dataset.get('Edge'))
