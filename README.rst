@@ -96,7 +96,7 @@ limitations under the License.
 History
 -------
 
-1.10.0(Apr 12, 2019)
+1.10.0(Apr 14, 2019)
 ~~~~~~~~~~~~~~~~~~~~
 
 * `#15 Support for v1.10.0 <https://github.com/woothee/woothee-python/pull/15>`_
