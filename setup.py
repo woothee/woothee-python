@@ -69,6 +69,9 @@ setup(
     license='Apache License 2.0',
     packages=find_packages('lib'),
     package_dir={'': 'lib'},
+    package_data={
+        'woothee': ['py.typed', '*.pyi'],
+    },
     platforms='any',
     install_requires=install_requires,
     setup_requires=['PyYAML>=3.10', 'six>=1.8.0', 'pytest-runner'],
