@@ -1,4 +1,5 @@
 include tox.ini
+include mypy.ini
 include Makefile
 include README.rst
 recursive-include scripts *.py
