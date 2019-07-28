@@ -1,6 +1,8 @@
 language: python
 matrix:
   include:
+    - python: 2.7
+      env: TOXENV=py27
     - python: 3.5
       env: TOXENV=py35
     - python: 3.6
@@ -23,8 +25,8 @@ before_install:
   - git submodule update --init
 install:
   - pip install tox
+  - if test "$TOXENV" = py27 ; then pip install --upgrade "pytest<5.0.0"; fi
   - if test "$TOXENV" = py37 ; then pip install coveralls ; fi
-  # - if test "$TOXENV" = py32 ; then pip install --upgrade "virtualenv<14.0.0" "setuptools<30.0.0"; fi
   - python setup.py dataset
 script: 
   - tox
