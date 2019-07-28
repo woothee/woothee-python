@@ -25,7 +25,6 @@ before_install:
   - git submodule update --init
 install:
   - pip install tox
-  - if test "$TOXENV" = py27 ; then pip install --upgrade "pytest<5.0.0"; fi
   - if test "$TOXENV" = py37 ; then pip install coveralls ; fi
   - python setup.py dataset
 script: 
