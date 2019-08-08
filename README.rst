@@ -96,6 +96,11 @@ limitations under the License.
 History
 -------
 
+1.10.1(Aug 8, 2019)
+~~~~~~~~~~~~~~~~~~~~
+
+* `#16 drop support Python3.4 <https://github.com/woothee/woothee-python/pull/16>`_.
+
 1.10.0(Apr 14, 2019)
 ~~~~~~~~~~~~~~~~~~~~
 
