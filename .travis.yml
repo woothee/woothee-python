@@ -1,19 +1,8 @@
 language: python
 matrix:
   include:
-    # Drop Support py26
-    # - python: 2.6
-    #   env: TOXENV=py26
     - python: 2.7
       env: TOXENV=py27
-    # Drop Support py32
-    # - python: 3.4
-    #   env: TOXENV=py32
-    # tox drop support py33
-    # - python: 3.3
-    #   env: TOXENV=py33
-    - python: 3.4
-      env: TOXENV=py34
     - python: 3.5
       env: TOXENV=py35
     - python: 3.6
@@ -22,7 +11,7 @@ matrix:
       env: TOXENV=py37
       dist: xenial
       sudo: true
-    - python: pypy
+    - python: pypy3.5
       env: TOXENV=pypy
     - python: 3.7
       env: TOXENV=flake8
@@ -37,7 +26,6 @@ before_install:
 install:
   - pip install tox
   - if test "$TOXENV" = py37 ; then pip install coveralls ; fi
-  # - if test "$TOXENV" = py32 ; then pip install --upgrade "virtualenv<14.0.0" "setuptools<30.0.0"; fi
   - python setup.py dataset
 script: 
   - tox
