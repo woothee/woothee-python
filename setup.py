@@ -73,7 +73,7 @@ setup(
     platforms='any',
     install_requires=install_requires,
     setup_requires=['PyYAML>=3.10', 'pytest-runner'],
-    tests_require=['pytest', 'pytest-cov', 'pytest-mock'],
+    tests_require=['pytest', 'pytest-cov', 'pytest-mock', 'zipp==1.1.0'],
     long_description=long_description,
     classifiers=classifiers,
     keywords=['web', 'user-agent', 'parser'],
