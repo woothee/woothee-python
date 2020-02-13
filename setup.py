@@ -31,7 +31,7 @@ classifiers = [
 ]
 
 
-install_requires = ['six>=1.8.0']
+install_requires = []
 
 if sys.version_info < (3, 5):
     install_requires.append('typing')
@@ -72,7 +72,7 @@ setup(
     },
     platforms='any',
     install_requires=install_requires,
-    setup_requires=['PyYAML>=3.10', 'six>=1.8.0', 'pytest-runner'],
+    setup_requires=['PyYAML>=3.10', 'pytest-runner'],
     tests_require=['pytest', 'pytest-cov', 'pytest-mock'],
     long_description=long_description,
     classifiers=classifiers,

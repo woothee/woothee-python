@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 from __future__ import (division, print_function,
                         absolute_import, unicode_literals)
-import six
 
 from . import dataset
 
 
 def update_map(target, source):
-    for key in six.iterkeys(source):
+    for key in source.keys():
         if key == dataset.KEY_LABEL or key == dataset.KEY_TYPE:
             continue
         if len(source[key]) > 0:

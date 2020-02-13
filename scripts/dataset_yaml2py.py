@@ -6,8 +6,6 @@ import os
 import yaml
 import datetime
 
-import six
-
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 dataset_file = os.path.join(base_dir, 'woothee', 'dataset.yaml')
 py_file = os.path.join(base_dir, 'lib', 'woothee', 'dataset.py')
@@ -115,8 +113,8 @@ def get(label):
     return DATASET[label]
 """ % dynamic_lines
 
-fp = open(py_file, 'wb')
+fp = open(py_file, 'w')
 try:
-    fp.write(six.b(module_text))
+    fp.write(module_text)
 finally:
     fp.close()
