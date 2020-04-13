@@ -79,6 +79,14 @@ def challenge_safari_chrome(ua, result):
         util.update_version(result, chromeVersion)
         return True
 
+    # GSA
+    obj = re.search('GSA/([.0-9]+)', ua)
+    if obj:
+        version = obj.group(1)
+        util.update_map(result, dataset.get('GSA'))
+        util.update_version(result, version)
+        return True
+
     # Safari
     obj = re.search('Version/([.0-9]+)', ua)
     if obj:
