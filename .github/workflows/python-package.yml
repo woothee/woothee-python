@@ -29,7 +29,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         python -m pip install --upgrade wheel
-        python -m pip install flake8 pytest pytest-cov mypy pyyaml
+        python -m pip install flake8 pytest pytest-cov pytest-mock mypy pyyaml zipp
         python setup.py install
     - name: setup project
       run: |
