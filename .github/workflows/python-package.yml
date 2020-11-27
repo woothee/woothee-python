@@ -35,9 +35,13 @@ jobs:
       run: |
         git submodule update --init
         python setup.py dataset
-    - name: Lint
+    - name: Lint with flake8
       run: |
         flake8 lib tests scripts
+    - name: mypy
+      if: matrix.python-version != 'pypy3'
+      run: |
+        python -m pip install mypy
         mypy lib tests
     - name: Test with pytest
       run: |
