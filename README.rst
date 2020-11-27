@@ -1,7 +1,7 @@
 Woothee python
 ==============
 
-|travis| |coveralls| |version| |license|
+|github actions| |coveralls| |version| |license|
 
 The Python implementation of Project Woothee, which is multi-language
 user-agent strings parsers.
@@ -155,9 +155,9 @@ History
 * First release
 
 
-.. |travis| image:: https://travis-ci.org/woothee/woothee-python.svg?branch=master
-    :target: https://travis-ci.org/woothee/woothee-python
-    :alt: travis-ci.org
+.. |github actions| image:: https://github.com/woothee/woothee-python/workflows/Python%20package/badge.svg
+    :target: https://github.com/woothee/woothee-python/actions
+    :alt: GitHub Actions build status
 
 .. |coveralls| image:: https://coveralls.io/repos/woothee/woothee-python/badge.png
     :target: https://coveralls.io/r/woothee/woothee-python
