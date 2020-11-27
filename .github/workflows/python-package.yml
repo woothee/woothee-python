@@ -28,7 +28,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        python -m pip install flake8 coveralls
+        python -m pip install flake8 coveralls wheel
         python -m pip install .[test] .[setup]
         python setup.py install
     - name: setup project
