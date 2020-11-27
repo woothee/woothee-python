@@ -33,7 +33,7 @@ classifiers = [
 
 install_requires = []
 setup_pkgs = ['PyYAML', 'pytest-runner']
-test_pkgs = ['pytest', 'pytest-cov', 'pytest-mock', 'zipp==1.1.0', 'mypy']
+test_pkgs = ['pytest', 'pytest-cov', 'pytest-mock', 'zipp==1.1.0']
 
 if sys.version_info < (3, 5):
     install_requires.append('typing')
