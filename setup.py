@@ -32,6 +32,7 @@ classifiers = [
 
 
 install_requires = []
+setup_pkgs = ['PyYAML', 'pytest-runner']
 test_pkgs = ['pytest', 'pytest-cov', 'pytest-mock', 'zipp==1.1.0', 'mypy']
 
 if sys.version_info < (3, 5):
@@ -73,10 +74,11 @@ setup(
     },
     platforms='any',
     install_requires=install_requires,
-    setup_requires=['PyYAML', 'pytest-runner'],
+    setup_requires=setup_pkgs,
     tests_require=test_pkgs,
     extras_require={
         "test": test_pkgs,
+        "setup": setup_pkgs,
     },
     long_description=long_description,
     classifiers=classifiers,
