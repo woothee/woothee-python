@@ -20,21 +20,17 @@ classifiers = [
     "License :: OSI Approved :: Apache Software License",
     "Operating System :: OS Independent",
     "Programming Language :: Python",
-    "Programming Language :: Python :: 2",
-    "Programming Language :: Python :: 2.7",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.5",
     "Programming Language :: Python :: 3.6",
     "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
     "Topic :: Internet :: WWW/HTTP",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 
-
-install_requires = []
-
-if sys.version_info < (3, 5):
-    install_requires.append('typing')
+setup_pkgs = ['PyYAML', 'pytest-runner']
+test_pkgs = ['pytest', 'pytest-cov', 'pytest-mock', 'zipp==1.1.0']
 
 
 class DatasetCommand(Command):
@@ -71,9 +67,12 @@ setup(
         'woothee': ['py.typed', '*.pyi'],
     },
     platforms='any',
-    install_requires=install_requires,
-    setup_requires=['PyYAML>=3.10', 'pytest-runner'],
-    tests_require=['pytest', 'pytest-cov', 'pytest-mock', 'zipp==1.1.0'],
+    setup_requires=setup_pkgs,
+    tests_require=test_pkgs,
+    extras_require={
+        "test": test_pkgs,
+        "setup": setup_pkgs,
+    },
     long_description=long_description,
     classifiers=classifiers,
     keywords=['web', 'user-agent', 'parser'],
