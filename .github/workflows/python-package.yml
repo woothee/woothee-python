@@ -42,6 +42,7 @@ jobs:
       if: matrix.python-version != 'pypy3'
       run: |
         python -m pip install mypy
+        mypy --install-types
         mypy lib tests
     - name: Test with pytest
       run: |
