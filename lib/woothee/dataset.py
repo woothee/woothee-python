@@ -42,7 +42,7 @@ DATASET = {}
 
 
 def _init():
-    # GENERATED from dataset.yaml at Mon Apr 13 11:52:09 2020 by hattorihideo
+    # GENERATED from dataset.yaml at Fri Oct  1 10:08:57 2021 by hattori
     obj = {'label': 'MSIE', 'name': 'Internet Explorer', 'type': 'browser'}  # NOQA
     obj['vendor'] = 'Microsoft'
     DATASET[obj['label']] = obj
@@ -75,6 +75,9 @@ def _init():
     DATASET[obj['label']] = obj
     obj = {'label': 'YaBrowser', 'name': 'Yandex Browser', 'type': 'browser'}  # NOQA
     obj['vendor'] = 'Yandex'
+    DATASET[obj['label']] = obj
+    obj = {'label': 'SamsungBrowser', 'name': 'SamsungBrowser', 'type': 'browser'}  # NOQA
+    obj['vendor'] = 'Samsung'
     DATASET[obj['label']] = obj
     obj = {'label': 'Win', 'name': 'Windows UNKNOWN Ver', 'type': 'os'}  # NOQA
     obj['category'] = 'pc'
@@ -353,6 +356,12 @@ def _init():
     obj['category'] = 'crawler'
     DATASET[obj['label']] = obj
     obj = {'label': 'VariousCrawler', 'name': 'misc crawler', 'type': 'full'}  # NOQA
+    obj['category'] = 'crawler'
+    DATASET[obj['label']] = obj
+    obj = {'label': 'AdsBotGoogleMobile', 'name': 'AdsBot-Google-Mobile', 'type': 'full'}  # NOQA
+    obj['category'] = 'crawler'
+    DATASET[obj['label']] = obj
+    obj = {'label': 'AdsBotGoogle', 'name': 'AdsBot-Google', 'type': 'full'}  # NOQA
     obj['category'] = 'crawler'
     DATASET[obj['label']] = obj
 
