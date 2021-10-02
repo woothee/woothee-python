@@ -78,6 +78,8 @@ def try_browser(useragent, result):
         return True
     if browser.challenge_yandexbrowser(useragent, result):
         return True
+    if browser.challenge_samsung(useragent, result):
+        return True
     if browser.challenge_safari_chrome(useragent, result):
         return True
     if browser.challenge_firefox(useragent, result):
