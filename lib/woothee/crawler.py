@@ -18,6 +18,14 @@ def challenge_google(ua, result):
             util.update_map(result, dataset.get('GoogleBot'))
         return True
 
+    if 'compatible; AdsBot-Google-Mobile;' in ua:
+        util.update_map(result, dataset.get('AdsBotGoogleMobile'))
+        return True
+
+    if ua.startswith('AdsBot-Google'):
+        util.update_map(result, dataset.get('AdsBotGoogle'))
+        return True
+
     if 'Googlebot-Image/' in ua:
         util.update_map(result, dataset.get('GoogleBot'))
         return True

@@ -169,3 +169,14 @@ def challenge_vivaldi(ua, result):
     util.update_map(result, dataset.get('Vivaldi'))
     util.update_version(result, version)
     return True
+
+
+def challenge_samsung(ua, result):
+    if 'SamsungBrowser/' not in ua:
+        return False
+
+    obj = re.search('SamsungBrowser/([.0-9]+)', ua)
+    version = obj.group(1) if obj else dataset.VALUE_UNKNOWN
+    util.update_map(result, dataset.get('SamsungBrowser'))
+    util.update_version(result, version)
+    return True
