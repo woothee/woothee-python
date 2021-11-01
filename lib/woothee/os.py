@@ -129,6 +129,10 @@ def challenge_smartphone(ua, result):
         data = dataset.get('iPod')
     elif 'Android' in ua:
         data = dataset.get('Android')
+        regex = re.compile(r"Android[- ](\d+(?:\.\d+(?:\.\d+)?)?)")
+        m = regex.search(ua)
+        if m:
+            os_version = m.group(1)
     elif 'CFNetwork' in ua:
         data = dataset.get('iOS')
     elif 'BB10' in ua:
