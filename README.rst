@@ -96,6 +96,23 @@ limitations under the License.
 History
 -------
 
+1.12.0, 1.12.1(not publish in PyPI)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* **drop support Python2 and Python3.5**
+* `#23 support woothee v1.12 <https://github.com/woothee/woothee-python/pull/23>`_.
+
+  * Add supoort samsugn browser
+  * Add support Google bot
+
+
+1.11.0(not publish in PyPI)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* `#18 support woothee v1.11 <https://github.com/woothee/woothee-python/pull/18>`_.
+
+  * Add support GSA
+
 1.10.1(Aug 8, 2019)
 ~~~~~~~~~~~~~~~~~~~~
 
