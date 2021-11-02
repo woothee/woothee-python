@@ -96,6 +96,11 @@ limitations under the License.
 History
 -------
 
+1.13.0(not publish in PyPI)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* `#27 support woothee v1.13.0 <https://github.com/woothee/woothee-python/pull/27>`_.
+
 1.12.0, 1.12.1(not publish in PyPI)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -104,7 +109,6 @@ History
 
   * Add supoort samsugn browser
   * Add support Google bot
-
 
 1.11.0(not publish in PyPI)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
