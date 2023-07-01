@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import (division, print_function,
                         absolute_import, unicode_literals)
-from typing import Dict
+from typing import Dict  # noqa
 
 from . import dataset
 from . import browser
