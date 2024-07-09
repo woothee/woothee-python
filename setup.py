@@ -30,7 +30,7 @@ classifiers = [
 ]
 
 setup_pkgs = ['PyYAML', 'pytest-runner']
-test_pkgs = ['pytest', 'pytest-cov', 'pytest-mock', 'zipp==1.1.0']
+test_pkgs = ['pytest', 'pytest-cov', 'pytest-mock', 'zipp==3.19.1']
 
 
 class DatasetCommand(Command):
